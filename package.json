@@ -1,0 +1,22 @@
+{
+  "name": "zhongtie_mini",
+  "version": "1.0.0",
+  "description": "miniProgram",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rzm1205/zhongtie_MiniProgram.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rzm1205/zhongtie_MiniProgram/issues"
+  },
+  "homepage": "https://github.com/rzm1205/zhongtie_MiniProgram#readme",
+  "dependencies": {
+    "@vant/weapp": "^1.5.0"
+  }
+}
