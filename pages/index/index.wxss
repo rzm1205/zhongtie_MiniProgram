@@ -12,3 +12,6 @@
 .container image{
   margin-bottom: 50rpx;
 }
+.entranceDialog{
+  margin: 20rpx;
+}

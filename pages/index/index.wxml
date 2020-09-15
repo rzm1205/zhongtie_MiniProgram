@@ -1,6 +1,30 @@
 <!--index.wxml-->
 <view class="container">
   <image src="/assets/images/home/home1.png" bind:tap="goAddvisitorPage" mode="widthFix"></image>
-  <image src="/assets/images/home/home2.png" mode="widthFix"></image>
-  <image src="/assets/images/home/home3.png" mode="widthFix"></image>
+  <image src="/assets/images/home/home2.png" bind:tap="openEntrance" mode="widthFix"></image>
+  <image src="/assets/images/home/home3.png" bind:tap="goInternalPage" mode="widthFix"></image>
 </view>
+<!-- 智能门禁弹框 -->
+<van-toast id="van-toast" />
+<van-dialog
+  title="请输入验证码"
+  show="{{ showEntrance }}"
+  show-cancel-button
+  use-slot
+  confirm-button-text="开门"
+  confirm-button-color="#157ee7"
+  bind:confirm="confirmEntranceMethod"
+  bind:close="onClose"
+>
+  <view class="entranceDialog">
+    <van-field
+      value="{{code}}"
+      type="text"
+      name="code"
+      bind:input="codeInput"
+      placeholder="请填写您的验证码"
+      border="{{ false }}"
+      >
+    </van-field>
+  </view>
+</van-dialog>
