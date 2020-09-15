@@ -1,0 +1,4 @@
+/* pages/detail/visitorDetail/addvisitor.wxss */
+.submit_btn{
+  margin:40rpx;
+}
