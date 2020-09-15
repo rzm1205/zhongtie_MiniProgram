@@ -7,3 +7,11 @@ export function queryEntrance(data) {
     data:data
   })
 }
+
+export function queryInternal(data) {
+  return request({
+    method:"post",
+    url:'/internalManage/login',
+    data:data
+  })
+}

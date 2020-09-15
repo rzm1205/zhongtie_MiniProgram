@@ -1,2 +1,62 @@
 <!--pages/internal/internal.wxml-->
-<text>pages/internal/internal.wxml</text>
+<view class="internal_bg">
+  <image src="/assets/images/internal/internal_bg.png" mode="widthFix"></image>
+</view>
+<view class="internal_cell">
+    <van-cell is-link 
+              link-type="navigateTo"
+              url="/pages/detail/internalDetail/activeGuide/activeGuide"
+              size="large">
+      <!-- 使用 title 插槽来自定义标题 -->
+        <view slot="title">
+          <image src="/assets/images/internal/internal1.png" alt="" />
+          <text class="custom-title">工作人员</text>
+        </view>
+    </van-cell>
+     <van-cell is-link 
+              link-type="navigateTo"
+              url="/pages/detail/internalDetail/activeGuide/activeGuide"
+              size="large">
+        <view slot="title">
+          <image src="/assets/images/internal/internal2.png" alt="" />
+          <text class="custom-title">预约管理</text>
+        </view>
+    </van-cell>
+
+     <van-cell is-link 
+              link-type="navigateTo"
+              url="/pages/detail/internalDetail/activeGuide/activeGuide"
+              size="large">
+        <view slot="title">
+          <image src="/assets/images/internal/internal3.png" alt="" />
+          <text class="custom-title">主动引领</text>
+        </view>
+    </van-cell>
+     <van-cell is-link 
+              link-type="navigateTo"
+              url="/pages/detail/internalDetail/activeGuide/activeGuide"
+              size="large">
+        <view slot="title">
+          <image src="/assets/images/internal/internal4.png" alt="" />
+          <text class="custom-title">短信通知</text>
+        </view>
+    </van-cell>
+     <van-cell is-link 
+              link-type="navigateTo"
+              url="/pages/detail/internalDetail/activeGuide/activeGuide"
+              size="large">
+        <view slot="title">
+          <image src="/assets/images/internal/internal5.png" alt="" />
+          <text class="custom-title">已有预约</text>
+        </view>
+    </van-cell>
+     <van-cell is-link 
+              link-type="navigateTo"
+              url="/pages/detail/internalDetail/activeGuide/activeGuide"
+              size="large">
+        <view slot="title">
+          <image src="/assets/images/internal/internal6.png" alt="" />
+          <text class="custom-title">密码修改</text>
+        </view>
+    </van-cell>
+</view>

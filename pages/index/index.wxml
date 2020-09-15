@@ -2,7 +2,7 @@
 <view class="container">
   <image src="/assets/images/home/home1.png" bind:tap="goAddvisitorPage" mode="widthFix"></image>
   <image src="/assets/images/home/home2.png" bind:tap="openEntrance" mode="widthFix"></image>
-  <image src="/assets/images/home/home3.png" bind:tap="goInternalPage" mode="widthFix"></image>
+  <image src="/assets/images/home/home3.png" bind:tap="openInternal" mode="widthFix"></image>
 </view>
 <!-- 智能门禁弹框 -->
 <van-toast id="van-toast" />
@@ -23,6 +23,30 @@
       name="code"
       bind:input="codeInput"
       placeholder="请填写您的验证码"
+      border="{{ false }}"
+      >
+    </van-field>
+  </view>
+</van-dialog>
+
+<!-- 内管管理弹框 -->
+<van-dialog
+  title="内部管理"
+  show="{{ showInternal }}"
+  show-cancel-button
+  use-slot
+  confirm-button-text="确定"
+  confirm-button-color="#157ee7"
+  bind:confirm="confirmInternalMethod"
+  bind:close="onClose"
+>
+  <view class="entranceDialog">
+    <van-field
+      value="{{pwd}}"
+      type="password"
+      name="pwd"
+      bind:input="codeInput"
+      placeholder="请填写内部管理密码"
       border="{{ false }}"
       >
     </van-field>

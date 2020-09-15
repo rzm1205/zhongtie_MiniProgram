@@ -4,7 +4,8 @@
     "pages/visitor/visitor",
     "pages/entrance/entrance",
     "pages/internal/internal",
-    "pages/detail/visitorDetail/addvisitor"
+    "pages/detail/visitorDetail/addvisitor",
+    "pages/detail/internalDetail/activeGuide/activeGuide"
   ],
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
@@ -13,7 +14,9 @@
     "van-datetime-picker": "@vant/weapp/datetime-picker/index",
     "van-picker": "@vant/weapp/picker/index",
     "van-toast": "@vant/weapp/toast/index",
-    "van-dialog": "@vant/weapp/dialog/index"
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index"
   },
   "window": {
     "backgroundTextStyle": "light",

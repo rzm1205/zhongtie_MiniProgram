@@ -1,1 +1,14 @@
 /* pages/internal/internal.wxss */
+.internal_bg{
+  width: 750rpx;
+}
+.internal_bg image{
+  width: 100%;
+}
+.internal_cell image{
+  width: 44rpx;
+  height: 44rpx;
+  vertical-align: middle;
+  margin-top: -4rpx;
+  margin-right: 12rpx;
+}
