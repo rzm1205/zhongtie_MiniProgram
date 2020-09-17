@@ -1,0 +1,28 @@
+/* pages/detail/internalDetail/msgNotify/msgNotify.wxss */
+.message{
+  margin: 30rpx;
+}
+.message .van-cell{
+  border: 1px solid #cdcdcd;
+  border-radius: 6rpx;
+  padding:20rpx;
+  margin-top: 20rpx;
+}
+.message .van-field__input--textarea{
+  height: 100rpx;
+}
+.message_title{
+  display: inline-block;
+  font-size: 40rpx;
+  color: #333333;
+  padding: 20rpx 0;
+}
+.message_tips{
+  display: inline-block;
+  font-size: 28rpx;
+  color: #666666;
+  padding: 10rpx 0;
+}
+.opendoor_btn{
+  margin:50rpx;
+}

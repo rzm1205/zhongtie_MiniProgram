@@ -1,0 +1,25 @@
+<!--pages/detail/internalDetail/msgNotify/msgNotify.wxml-->
+<view class="message">
+  <text class="message_title">请编辑您的同意短信</text>
+  <text class="message_tips">此短信为同意短信</text> 
+  <van-field
+    value="{{agreeMsg}}"
+    rows="4"
+    type="textarea"
+  />
+</view>
+<view class="message">
+  <text class="message_title">请编辑您的拒绝短信</text>
+  <text class="message_tips">此短信为拒绝短信</text> 
+  <van-field
+    value="{{rejectMsg}}"
+    rows="4"
+    type="textarea"
+  />
+</view>
+
+<view class="opendoor_btn">
+  <van-button block round type="info" bind:tap="saveMsgMethod" >
+    保存修改
+  </van-button>
+</view>

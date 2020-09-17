@@ -1,1 +1,25 @@
 /* pages/detail/internalDetail/activeGuide/activeGuide.wxss */
+.broadcast {
+  margin: 30rpx;
+}
+.broadcast .title{
+  color: #333333;
+}
+.broadcast .van-cell{
+  border: 1px solid #cdcdcd;
+  border-radius: 6rpx;
+  padding:20rpx;
+  margin-top: 20rpx;
+}
+.broadcast .van-field__input--textarea{
+  height: 100rpx;
+}
+.position{
+  padding: 20rpx 0;
+}
+.opendoor_btn{
+  margin:50rpx;
+}
+.activePosition{
+  background: #f2f6f9;
+}

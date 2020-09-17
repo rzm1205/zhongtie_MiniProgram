@@ -1,2 +1,36 @@
 <!--pages/detail/internalDetail/activeGuide/activeGuide.wxml-->
-<text>pages/detail/internalDetail/activeGuide/activeGuide.wxml</text>
+<view class="broadcast">
+  <text class="title">欢迎语</text>
+  <van-field
+    value="{{commonBroadcast}}"
+    type="textarea"
+    name="commonBroadcast"
+    bind:input="commonBroadcastInput"
+    placeholder="请输入通用迎宾语"
+    >
+  </van-field>
+</view>
+<view class="broadcast position">
+  <text>请选择定位</text>
+  <block wx:for="{{positionList}}" wx:key="index">
+    <view data-item="{{item}}" bind:tap="getPositionId" 
+          class="position_item {{curPositionId == item.slocId?'activePosition':''}}" >
+      <text>
+        {{item.slocName}}
+      </text>
+      <van-field
+        value="{{positionBroadcast}}"
+        bind:input="positionBroadcastInput"
+        placeholder="请输入贵宾点位迎宾语"
+        wx:if="{{item.isVIP}}"
+      />
+    </view>
+  </block>
+</view>
+<view class="opendoor_btn">
+  <van-button block round type="info" bind:tap="activeOpenDoorMethod" >
+    开门
+  </van-button>
+</view>
+
+<van-toast id="van-toast" />

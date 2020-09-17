@@ -34,7 +34,7 @@
     </van-cell>
      <van-cell is-link 
               link-type="navigateTo"
-              url="/pages/detail/internalDetail/activeGuide/activeGuide"
+              url="/pages/detail/internalDetail/msgNotify/msgNotify"
               size="large">
         <view slot="title">
           <image src="/assets/images/internal/internal4.png" alt="" />
