@@ -1,6 +1,7 @@
 /* pages/detail/internalDetail/msgNotify/msgNotify.wxss */
 .message{
   margin: 30rpx;
+  text-align: center;
 }
 .message .van-cell{
   border: 1px solid #cdcdcd;
@@ -12,13 +13,11 @@
   height: 100rpx;
 }
 .message_title{
-  display: inline-block;
   font-size: 40rpx;
   color: #333333;
   padding: 20rpx 0;
 }
 .message_tips{
-  display: inline-block;
   font-size: 28rpx;
   color: #666666;
   padding: 10rpx 0;

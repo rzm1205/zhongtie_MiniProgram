@@ -10,5 +10,5 @@
   height: 44rpx;
   vertical-align: middle;
   margin-top: -4rpx;
-  margin-right: 12rpx;
+  margin-right: 20rpx;
 }

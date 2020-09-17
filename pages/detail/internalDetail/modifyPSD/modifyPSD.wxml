@@ -1,0 +1,27 @@
+<!--pages/detail/internalDetail/modifyPSD/modifyPSD.wxml-->
+<form bindsubmit="onSubmit">
+  <view class="message">
+    <view class="message_title">请设置您的新密码</view>
+    <view class="message_tips">密码为6位数字</view> 
+    <van-field
+      value="{{oldPwd}}"
+      name="oldPwd" 
+      type="password"
+      label="旧密码"
+      placeholder="请输入旧密码"
+    />
+    <van-field
+      value="{{newPwd}}"
+      name="newPwd" 
+      type="password"
+      label="新密码"
+      placeholder="请输入新密码"
+    />
+  </view>
+  <view class="opendoor_btn">
+    <van-button block round type="info" form-type="submit">
+      保存修改
+    </van-button>
+  </view>
+</form>
+<van-toast id="van-toast" />

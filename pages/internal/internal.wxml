@@ -43,7 +43,7 @@
     </van-cell>
      <van-cell is-link 
               link-type="navigateTo"
-              url="/pages/detail/internalDetail/activeGuide/activeGuide"
+              url="/pages/detail/internalDetail/appointment/appointment"
               size="large">
         <view slot="title">
           <image src="/assets/images/internal/internal5.png" alt="" />
@@ -52,7 +52,7 @@
     </van-cell>
      <van-cell is-link 
               link-type="navigateTo"
-              url="/pages/detail/internalDetail/activeGuide/activeGuide"
+              url="/pages/detail/internalDetail/modifyPSD/modifyPSD"
               size="large">
         <view slot="title">
           <image src="/assets/images/internal/internal6.png" alt="" />

@@ -1,0 +1,27 @@
+<!--pages/detail/internalDetail/appointment/appointment.wxml-->
+<!-- 已有预约 -->
+<view class="message">
+  <block wx:for="{{pageInfoList}}" wx:key="index">
+    <view class="message_item">
+        <view>访客: <text>{{item.name}}</text></view>
+        <view>电话: <text>{{item.phone}}</text></view>
+        <view>公司: <text>{{item.company}}</text></view>
+        <view>拜访时间: <text>{{m1.ToDate(item.visitDate)}}</text></view>
+        <view>拜访人: <text>{{item.visitName}}</text></view>
+    </view>
+  </block>
+</view>
+<!-- 时间戳转换时间格式 -->
+<wxs module = "m1">
+    var ToDate = function(number1){
+      var n = number1; //number1 为毫秒 
+      var date = getDate(n);
+      var Y = date.getFullYear() + '-';
+      var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+      var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+      var h = date.getHours() < 10 ? '0' + date.getHours() : date.getHours();
+      var m = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();
+      return (Y + M + D + " " + h + ":" + m);
+    }
+    module.exports.ToDate = ToDate;
+  </wxs>

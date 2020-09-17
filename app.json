@@ -6,7 +6,9 @@
     "pages/internal/internal",
     "pages/detail/visitorDetail/addvisitor",
     "pages/detail/internalDetail/activeGuide/activeGuide",
-    "pages/detail/internalDetail/msgNotify/msgNotify"
+    "pages/detail/internalDetail/msgNotify/msgNotify",
+    "pages/detail/internalDetail/modifyPSD/modifyPSD",
+    "pages/detail/internalDetail/appointment/appointment"
   ],
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
