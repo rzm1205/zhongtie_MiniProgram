@@ -1,0 +1,28 @@
+/* pages/detail/internalDetail/personnel/personnel.wxss */
+
+.personnel_name{
+  font-family: PingFang-SC-Bold;
+	font-size: 36rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	color: #333333;
+}
+.personnel_phone{
+  font-family: PingFang-SC-Medium;
+	font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+  color: #333333;
+  margin-left: 16rpx;
+}
+.personnel_label{
+  font-family: PingFang-SC-Medium;
+	font-size: 30rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	color: #333333;
+}
+
+.opendoor_btn{
+  margin:50rpx;
+}

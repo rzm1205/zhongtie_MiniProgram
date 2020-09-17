@@ -1,0 +1,4 @@
+/* pages/detail/internalDetail/modifyPersonnel/modifyPersonnel.wxss */
+.openDoor_btn{
+  margin: 50rpx;
+}

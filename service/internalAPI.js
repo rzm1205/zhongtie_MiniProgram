@@ -70,3 +70,52 @@ export function queryAppointmentInfo() {
     }
   })
 }
+//查询工作人员列表
+export function queryPersonnelInfo() {
+  return request({
+    method:"post",
+    url:'/ztjgPersonnel/listPersonnel',
+    data:{
+      _token_iben:token
+    }
+  })
+}
+//通过id获取单个工作人员
+export function getPersonnel(id) {
+  return request({
+    method:"post",
+    url:'/ztjgPersonnel/getPersonnel',
+    data:{
+      id:id,
+      _token_iben:token
+    }
+  })
+}
+//修改保存单个工作人员
+export function updatePersonnel(id,name,phone,dept,position) {
+  return request({
+    method:"post",
+    url:'/ztjgPersonnel/updatePersonnel',
+    data:{
+      id: id,
+      name: name,
+      phone: phone,
+      dept: dept,
+      position: position,
+      _token_iben:token
+    }
+  })
+}
+//删除单个工作人员
+export function deletePersonnel(id) {
+  return request({
+    method:"post",
+    url:'/ztjgPersonnel/deletePersonnel',
+    data:{
+      id: id,
+      _token_iben:token
+    }
+  })
+}
+
+

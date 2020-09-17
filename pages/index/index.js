@@ -40,9 +40,9 @@ Page({
   },
   //确认开启门禁
   confirmEntranceMethod (e){
-    if(this.data.code === ''){
+    if(this.data.code === '' || this.data.code==undefined){
       Toast.fail('请输入验证码');
-      return ;
+      return false;
     }
     let params = {
       code:this.data.code,

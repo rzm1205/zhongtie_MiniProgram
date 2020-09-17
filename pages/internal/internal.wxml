@@ -22,7 +22,6 @@
           <text class="custom-title">预约管理</text>
         </view>
     </van-cell>
-
      <van-cell is-link 
               link-type="navigateTo"
               url="/pages/detail/internalDetail/activeGuide/activeGuide"

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/detail/internalDetail/personnel/personnel",
     "pages/index/index",
     "pages/visitor/visitor",
     "pages/entrance/entrance",
@@ -8,7 +9,9 @@
     "pages/detail/internalDetail/activeGuide/activeGuide",
     "pages/detail/internalDetail/msgNotify/msgNotify",
     "pages/detail/internalDetail/modifyPSD/modifyPSD",
-    "pages/detail/internalDetail/appointment/appointment"
+    "pages/detail/internalDetail/appointment/appointment",
+    "pages/detail/internalDetail/addPersonnel/addPersonnel",
+    "pages/detail/internalDetail/modifyPersonnel/modifyPersonnel"
   ],
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",

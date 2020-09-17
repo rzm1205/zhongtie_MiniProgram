@@ -1,0 +1,49 @@
+<!--pages/detail/internalDetail/modifyPersonnel/modifyPersonnel.wxml-->
+<form bindsubmit='formSubmit'>
+    <van-cell-group>
+      <van-field
+          value="{{ personnel.name }}"
+          required
+          name="name"
+          label="姓名"
+          placeholder="请输入姓名"
+          :rules="[{ required: true, message: '请输入姓名' }]"
+        />
+        <van-field
+          value="{{ personnel.phone }}"
+          required
+          name="phone"
+          label-class="enter_label"
+          label="手机号"
+          type="tel"
+          placeholder="请输入手机号"
+        />
+        <van-field
+          required
+          value="{{ personnel.dept }}"
+          name="dept"
+          label-class="enter_label"
+          label="部门"
+          placeholder="请输入部门"
+        />
+         <van-field
+          required
+          value="{{ personnel.position }}"
+          name="position"
+          label-class="enter_label"
+          label="职位"
+          placeholder="请输入职位"
+        />
+    </van-cell-group>
+    <view class="openDoor_btn">
+        <van-button block round type="info"  form-type='submit'>
+          修改保存
+        </van-button>
+    </view>
+  </form>
+<view class="openDoor_btn">
+    <van-button block round type="danger"  bind:tap="deletePersonnelMethod">
+      删除该人员
+    </van-button>
+</view>
+<van-toast id="van-toast" />
