@@ -1,9 +1,7 @@
 {
   "pages": [
-    "pages/detail/internalDetail/personnel/personnel",
+    "pages/detail/internalDetail/booking/booking",
     "pages/index/index",
-    "pages/visitor/visitor",
-    "pages/entrance/entrance",
     "pages/internal/internal",
     "pages/detail/visitorDetail/addvisitor",
     "pages/detail/internalDetail/activeGuide/activeGuide",
@@ -11,7 +9,8 @@
     "pages/detail/internalDetail/modifyPSD/modifyPSD",
     "pages/detail/internalDetail/appointment/appointment",
     "pages/detail/internalDetail/addPersonnel/addPersonnel",
-    "pages/detail/internalDetail/modifyPersonnel/modifyPersonnel"
+    "pages/detail/internalDetail/modifyPersonnel/modifyPersonnel",
+    "pages/detail/internalDetail/personnel/personnel"
   ],
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
@@ -22,7 +21,8 @@
     "van-toast": "@vant/weapp/toast/index",
     "van-dialog": "@vant/weapp/dialog/index",
     "van-cell": "@vant/weapp/cell/index",
-    "van-cell-group": "@vant/weapp/cell-group/index"
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index"
   },
   "window": {
     "backgroundTextStyle": "light",

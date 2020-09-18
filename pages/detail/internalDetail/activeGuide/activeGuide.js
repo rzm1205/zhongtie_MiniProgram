@@ -55,6 +55,7 @@ Page({
       positionBroadcast:event.detail
     })
   },
+  //获取点位id
   getPositionId(event){
     console.log(event)
     // eventTarget.dataset;

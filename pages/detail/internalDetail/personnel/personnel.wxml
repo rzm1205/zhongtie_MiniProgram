@@ -1,25 +1,35 @@
 <!--pages/detail/internalDetail/personnel/personnel.wxml-->
 <view>
-  <van-cell  
-  is-link 
-  center 
-  use-label-slot
-  wx:for="{{personnelList}}"
-  wx:key="index" 
-  link-type="navigateTo" 
-  url="/pages/detail/internalDetail/modifyPersonnel/modifyPersonnel?id={{item.id}}"
+  <van-swipe-cell 
+    right-width="{{ 65 }}" 
+     wx:for="{{personnelList}}"
+     wx:key="index" 
+     data-id="{{item.id}}"
+     async-close
+     bind:close="onClose"
   >
-    <!-- 使用 title 插槽 -->
-    <view slot="title">
-      <text class="personnel_name">{{item.name}}</text>
-      <text class="personnel_phone">{{item.phone}}</text>
-    </view>
-    <!-- 使用 label 插槽 -->
-    <view slot="label" >
-      <text class="custom-title personnel_label">{{item.dept}}</text>
-      <text class="custom-title personnel_phone">{{item.position}}</text>
-    </view>
-  </van-cell>
+    <van-cell-group>
+        <van-cell  
+          is-link 
+          center 
+          use-label-slot
+          link-type="navigateTo" 
+          url="/pages/detail/internalDetail/modifyPersonnel/modifyPersonnel?id={{item.id}}"
+          >
+          <!-- 使用 title 插槽 -->
+          <view slot="title">
+            <text class="personnel_name">{{item.name}}</text>
+            <text class="personnel_phone">{{item.phone}}</text>
+          </view>
+          <!-- 使用 label 插槽 -->
+          <view slot="label" >
+            <text class="custom-title personnel_label">{{item.dept}}</text>
+            <text class="custom-title personnel_phone">{{item.position}}</text>
+          </view>
+        </van-cell>
+    </van-cell-group>
+    <view slot="right" class="van-swipe-cell__right">删除</view>
+  </van-swipe-cell>
 </view>
 <view class="opendoor_btn">
   <van-button
@@ -30,3 +40,5 @@
     bind:tap="goAddPersonnelMethod"
     >新增工作人员</van-button>
 </view>
+<van-dialog id="van-dialog" />
+<van-toast id="van-toast" />

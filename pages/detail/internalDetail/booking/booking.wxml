@@ -1,0 +1,65 @@
+<!--pages/detail/internalDetail/booking/booking.wxml-->
+<block wx:for="{{pageInfoList}}" wx:key="index">
+  <view class="message">
+    <view class="message_left">
+        <view>访客: <text>{{item.name}}</text></view>
+        <view>电话: <text>{{item.phone}}</text></view>
+        <view>公司: <text>{{item.company}}</text></view>
+        <view>拜访时间: <text>{{m1.ToDate(item.visitDate)}}</text></view>
+        <view>拜访人: <text>{{item.visitName}}</text></view>
+    </view>
+    <view class="message_right">
+      <view class="agree">
+         <van-button type="info" data-item="{{item}}"  bind:tap="agreeDialog" size="mini">同意</van-button>
+      </view>
+      <view class="reject">
+         <van-button type="danger" data-id="{{item.id}}"  bind:tap="rejectDialog" size="mini">拒绝</van-button>
+      </view>
+    </view>
+  </view>
+</block>
+<!-- 点击同意后弹框选择定位 -->
+<van-dialog
+  title="请选择定位"
+  show="{{ showAgree }}"
+  show-cancel-button
+  use-slot
+  confirm-button-color="#157ee7"
+  bind:confirm="agreeInfoMethod"
+  bind:close="onClose"
+>
+  <view class="position">
+    <block wx:for="{{positionList}}" wx:key="index">
+      <view data-item="{{item}}" bind:tap="getPositionId" 
+            class="position_item {{curPositionId == item.slocId?'activePosition':''}}" >
+        <text>
+          {{item.slocName}}
+        </text>
+        <van-field
+          value="{{positionBroadcast}}"
+          bind:input="positionBroadcastInput"
+          placeholder="请输入贵宾点位迎宾语"
+          wx:if="{{item.isVIP}}"
+        />
+      </view>
+    </block>
+  </view>
+</van-dialog>
+
+<van-dialog id="van-dialog" />
+<van-toast id="van-toast" />
+
+<!-- 时间戳转换时间格式 -->
+<wxs module = "m1">
+    var ToDate = function(number1){
+      var n = number1; //number1 为毫秒 
+      var date = getDate(n);
+      var Y = date.getFullYear() + '-';
+      var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+      var D = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+      var h = date.getHours() < 10 ? '0' + date.getHours() : date.getHours();
+      var m = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();
+      return (Y + M + D + " " + h + ":" + m);
+    }
+    module.exports.ToDate = ToDate;
+  </wxs>

@@ -1,5 +1,5 @@
 // pages/detail/internalDetail/modifyPersonnel/modifyPersonnel.js
-import { getPersonnel,updatePersonnel,deletePersonnel }  from '../../../../service/internalAPI'
+import { getPersonnel,updatePersonnel }  from '../../../../service/internalAPI'
 import Toast from '@vant/weapp/toast/toast';
 Page({
 
@@ -44,20 +44,6 @@ Page({
       if(res.data.rs === 1){
         Toast.success("修改成功");
         // 修改成功后，返回
-        setTimeout( ()=>{
-          wx.navigateBack({
-            delta: 1,
-          })
-        },2000)
-      }
-    })
-  },
-  //删除该人员
-  deletePersonnelMethod(){
-    deletePersonnel(this.data.id).then( res =>{
-      if(res.data.rs === 1){
-        Toast.success("删除成功");
-        // 删除成功后，返回
         setTimeout( ()=>{
           wx.navigateBack({
             delta: 1,

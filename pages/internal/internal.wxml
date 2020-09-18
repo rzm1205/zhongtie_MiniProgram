@@ -5,7 +5,7 @@
 <view class="internal_cell">
     <van-cell is-link 
               link-type="navigateTo"
-              url="/pages/detail/internalDetail/activeGuide/activeGuide"
+              url="/pages/detail/internalDetail/personnel/personnel"
               size="large">
       <!-- 使用 title 插槽来自定义标题 -->
         <view slot="title">
@@ -15,7 +15,7 @@
     </van-cell>
      <van-cell is-link 
               link-type="navigateTo"
-              url="/pages/detail/internalDetail/activeGuide/activeGuide"
+              url="/pages/detail/internalDetail/booking/booking"
               size="large">
         <view slot="title">
           <image src="/assets/images/internal/internal2.png" alt="" />

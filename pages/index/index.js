@@ -3,6 +3,7 @@ import { hexMD5 } from "../../utils/md5"
 import Toast from '@vant/weapp/toast/toast';
 //全局实例获取的数据
 const enterpriseId = getApp().globalData.enterpriseId
+const robotUuid = getApp().globalData.robotUuid 
 Page({
   /**
    * 页面的初始数据

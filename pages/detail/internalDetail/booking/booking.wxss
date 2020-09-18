@@ -1,0 +1,30 @@
+/* pages/detail/internalDetail/booking/booking.wxss */
+.message{
+  margin: 30rpx;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  justify-content: space-between;
+  border-radius: 10rpx;
+  padding: 20rpx 40rpx;
+}
+.message_left{
+  margin: 20rpx 0;
+}
+.message_left view{
+  padding: 10rpx 0;
+  color: #333333;
+}
+.message_left text{
+  color: #666666;
+}
+.message_right .agree, .message_right .reject{
+  margin: 48rpx 0;
+}
+.position{
+  padding: 20rpx 0;
+}
+.activePosition{
+  background: #f2f6f9;
+}

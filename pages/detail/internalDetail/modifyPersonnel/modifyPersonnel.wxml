@@ -41,9 +41,4 @@
         </van-button>
     </view>
   </form>
-<view class="openDoor_btn">
-    <van-button block round type="danger"  bind:tap="deletePersonnelMethod">
-      删除该人员
-    </van-button>
-</view>
 <van-toast id="van-toast" />

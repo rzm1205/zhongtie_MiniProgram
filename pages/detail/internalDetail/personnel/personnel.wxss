@@ -26,3 +26,17 @@
 .opendoor_btn{
   margin:50rpx;
 }
+.van-swipe-cell__left,
+.van-swipe-cell__right {
+  display: inline-block;
+  width: 65px;
+  height: 67px;
+  font-size: 15px;
+  line-height: 67px;
+  color: #fff;
+  text-align: center;
+  background-color: #f44;
+}
+.van-swipe-cell__left{
+	background-color: #07c160;
+}

@@ -117,5 +117,52 @@ export function deletePersonnel(id) {
     }
   })
 }
-
+//新增保存工作人员
+export function addPersonnel(name,phone,dept,position) {
+  return request({
+    method:"post",
+    url:'/ztjgPersonnel/addPersonnel',
+    data:{
+      name: name,
+      phone: phone,
+      dept: dept,
+      position: position,
+      _token_iben:token
+    }
+  })
+}
+//查询未预约成功，待同意拒绝的列表
+export function queryBookingInfo() {
+  return request({
+    method:"post",
+    url:'/ztjgOrderManage/listToBereviewedOrderRecord',
+    data:{
+      _token_iben:token
+    }
+  })
+}
+//拒绝预约
+export function rejectInfo(id) {
+  return request({
+    method:"post",
+    url:'/ztjgOrderManage/reject',
+    data:{
+      id:id,
+      _token_iben:token
+    }
+  })
+}
+//同意预约
+export function agreeInfo(id,positionId,positionBroadcast) {
+  return request({
+    method:"post",
+    url:'/ztjgOrderManage/agree',
+    data:{
+      id:id,
+      positionId:positionId,
+      positionBroadcast:positionBroadcast,
+      _token_iben:token
+    }
+  })
+}
 

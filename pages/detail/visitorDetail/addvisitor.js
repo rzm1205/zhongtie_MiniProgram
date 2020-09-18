@@ -1,6 +1,7 @@
 // pages/detail/visitorDetail/addvisitor.js
 import { formatTime } from '../../../utils/util'
 import { queryPersonnelPageInfo, submit } from '../../../service/addvisitorAPI'
+import Toast from '@vant/weapp/toast/toast';
 const enterpriseId = getApp().globalData.enterpriseId
 Page({
   /**
@@ -100,17 +101,15 @@ Page({
     submit(values).then( res => {
         console.log(res)
         if(res.data.rs === 1){
-          wx.showToast({
-            title: '您的预约已提交,请您耐心等待',
-            icon: 'success',
-            duration: 2000
-          })
+          Toast.success("您的预约已提交,请您耐心等待");
           setTimeout(()=>{
             //返回index页面
             wx.navigateTo({
               url: '/pages/index/index',
             })
           },3000)
+        }else{
+          Toast.fail(res.data.data.errorMsg);
         }
     }).catch(err =>{
 
