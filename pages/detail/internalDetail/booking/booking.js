@@ -58,6 +58,7 @@ Page({
   },
   //定位播报语
   positionBroadcastInput(event){
+    console.log(event)
     this.setData({
       positionBroadcast:event.detail
     })
@@ -88,7 +89,11 @@ Page({
         Toast.success("同意成功");
         this._queryPageInfo();//查询列表
       }else{
-        Toast.fail(res.data.data.erroMsg);
+        if(res.data.data && res.data.data.erroMsg){
+          Toast.fail(res.data.data.erroMsg);
+        }else{
+          Toast.fail(res.data.erroMsg);
+        }
       }
     })
   },

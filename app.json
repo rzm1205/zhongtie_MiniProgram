@@ -1,6 +1,5 @@
 {
   "pages": [
-    "pages/detail/internalDetail/booking/booking",
     "pages/index/index",
     "pages/internal/internal",
     "pages/detail/visitorDetail/addvisitor",
@@ -10,6 +9,7 @@
     "pages/detail/internalDetail/appointment/appointment",
     "pages/detail/internalDetail/addPersonnel/addPersonnel",
     "pages/detail/internalDetail/modifyPersonnel/modifyPersonnel",
+    "pages/detail/internalDetail/booking/booking",
     "pages/detail/internalDetail/personnel/personnel"
   ],
   "usingComponents": {
@@ -25,10 +25,12 @@
     "van-swipe-cell": "@vant/weapp/swipe-cell/index"
   },
   "window": {
-    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "中铁建工",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "backgroundColor":"#cccccc",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh":true
   },
   "sitemapLocation": "sitemap.json"
 }

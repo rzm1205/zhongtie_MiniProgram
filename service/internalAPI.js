@@ -1,9 +1,10 @@
-import request from './network.js'
-const token = wx.getStorageSync('token')
+import {request2} from './network.js'
+const token = wx.getStorageSync('token');
+console.log(token);
 const robUuid = getApp().globalData.robUuid
 // 查询定位列表
 export function queryPositionList() {
-  return request({
+  return request2({
     method:"post",
     url:'/scene/listPointsByRobUuid',
     data:{
@@ -14,7 +15,7 @@ export function queryPositionList() {
 }
 //主动引领开门方法
 export function openDoor(commonBroadcast,positionBroadcast,positionId) {
-  return request({
+  return request2({
     method:"post",
     url:'/ztjgOrderManage/manualUnlock',
     data:{
@@ -28,7 +29,7 @@ export function openDoor(commonBroadcast,positionBroadcast,positionId) {
 }
 //查询短信模板
 export function queryMsgInfo() {
-  return request({
+  return request2({
     method:"post",
     url:'/messageTemplate/query',
     data:{
@@ -38,7 +39,7 @@ export function queryMsgInfo() {
 }
 //保存短信
 export function saveMsg(agreeMsg,rejectMsg) {
-  return request({
+  return request2({
     method:"post",
     url:'/messageTemplate/save',
     data:{
@@ -50,7 +51,7 @@ export function saveMsg(agreeMsg,rejectMsg) {
 }
 //修改密码
 export function modifyPSD(oldPwd,newPwd) {
-  return request({
+  return request2({
     method:"post",
     url:'/internalManage/updatePwd',
     data:{
@@ -62,7 +63,7 @@ export function modifyPSD(oldPwd,newPwd) {
 }
 //查询预约列表
 export function queryAppointmentInfo() {
-  return request({
+  return request2({
     method:"post",
     url:'/ztjgOrderManage/listPassedOrderRecord',
     data:{
@@ -72,7 +73,7 @@ export function queryAppointmentInfo() {
 }
 //查询工作人员列表
 export function queryPersonnelInfo() {
-  return request({
+  return request2({
     method:"post",
     url:'/ztjgPersonnel/listPersonnel',
     data:{
@@ -82,7 +83,7 @@ export function queryPersonnelInfo() {
 }
 //通过id获取单个工作人员
 export function getPersonnel(id) {
-  return request({
+  return request2({
     method:"post",
     url:'/ztjgPersonnel/getPersonnel',
     data:{
@@ -93,7 +94,7 @@ export function getPersonnel(id) {
 }
 //修改保存单个工作人员
 export function updatePersonnel(id,name,phone,dept,position) {
-  return request({
+  return request2({
     method:"post",
     url:'/ztjgPersonnel/updatePersonnel',
     data:{
@@ -108,7 +109,7 @@ export function updatePersonnel(id,name,phone,dept,position) {
 }
 //删除单个工作人员
 export function deletePersonnel(id) {
-  return request({
+  return request2({
     method:"post",
     url:'/ztjgPersonnel/deletePersonnel',
     data:{
@@ -119,7 +120,7 @@ export function deletePersonnel(id) {
 }
 //新增保存工作人员
 export function addPersonnel(name,phone,dept,position) {
-  return request({
+  return request2({
     method:"post",
     url:'/ztjgPersonnel/addPersonnel',
     data:{
@@ -133,7 +134,7 @@ export function addPersonnel(name,phone,dept,position) {
 }
 //查询未预约成功，待同意拒绝的列表
 export function queryBookingInfo() {
-  return request({
+  return request2({
     method:"post",
     url:'/ztjgOrderManage/listToBereviewedOrderRecord',
     data:{
@@ -143,7 +144,7 @@ export function queryBookingInfo() {
 }
 //拒绝预约
 export function rejectInfo(id) {
-  return request({
+  return request2({
     method:"post",
     url:'/ztjgOrderManage/reject',
     data:{
@@ -154,7 +155,7 @@ export function rejectInfo(id) {
 }
 //同意预约
 export function agreeInfo(id,positionId,positionBroadcast) {
-  return request({
+  return request2({
     method:"post",
     url:'/ztjgOrderManage/agree',
     data:{

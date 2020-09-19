@@ -75,25 +75,19 @@ Page({
       showInternal:true
     })
   },
-  //前往内部管理
-  goInternalPage(){
-    wx.navigateTo({
-      url: '/pages/internal/internal',
-    })
-  },
   //确认登录到内部管理
   confirmInternalMethod (e){
     if(this.data.pwd === ''){
       Toast.fail('请输入密码');
       return ;
     }
-    console.log(hexMD5("123"));
+    // console.log(hexMD5("123"));
     let params = {
       pwd:hexMD5(this.data.pwd),
       enterpriseId:enterpriseId
     }
     queryInternal(params).then( res =>{
-        console.log(res)
+        // console.log(res)
         if(res.data.rs === 1){
           // console.log(res.data._token_iben)
           //将token存储到Storage中
@@ -110,4 +104,10 @@ Page({
 
     })
   },
+  //前往内部管理
+  goInternalPage(){
+    wx.navigateTo({
+      url: '/pages/internal/internal',
+    })
+  }
 })

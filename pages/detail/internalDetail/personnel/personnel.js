@@ -16,7 +16,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this._queryPersonnelList();//查询列表
+    // this._queryPersonnelList();//查询列表
   },
   onShow: function () {
     //需要写在onshow生命周期中，否则不刷新
